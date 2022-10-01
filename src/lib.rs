@@ -226,14 +226,14 @@ mod tests {
             websites: None,
         });
 
-        let mint_msg = ExecuteMsg::Mint(MintMsg::<Extension> {
+        let mint_msg = ExecuteMsg::Mint(MintMsg {
             token_id: token_id1.clone(),
             owner: CREATOR.to_string(),
             token_uri: None,
             extension: metadata_extension.clone(),
         });
 
-        let mint_msg2 = ExecuteMsg::Mint(MintMsg::<Extension> {
+        let mint_msg2 = ExecuteMsg::Mint(MintMsg {
             token_id: token_id2.clone(),
             owner: "innocent hodlr".to_string(),
             token_uri: None,
@@ -344,7 +344,7 @@ mod tests {
         let token_id = "petrify".to_string();
         let token_uri = "https://www.merriam-webster.com/dictionary/petrify".to_string();
 
-        let mint_msg = ExecuteMsg::Mint(MintMsg::<Extension> {
+        let mint_msg = ExecuteMsg::Mint(MintMsg {
             token_id: token_id.clone(),
             owner: "someone".to_string(),
             token_uri: Some(token_uri),
