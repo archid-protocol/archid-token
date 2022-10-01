@@ -360,9 +360,9 @@ mod tests {
             .unwrap();
 
         // Owner not allowed to burn as admin
-        let random = mock_info("someone", &[]);
+        let owner = mock_info("someone", &[]);
         let err = contract
-            .execute(deps.as_mut(), mock_env(), random, burn_msg.clone())
+            .execute(deps.as_mut(), mock_env(), owner, burn_msg.clone())
             .unwrap_err();
 
         assert_eq!(err, ContractError::Unauthorized {});
