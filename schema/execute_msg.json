@@ -204,6 +204,27 @@
       "additionalProperties": false
     },
     {
+      "description": "Burn admin only override",
+      "type": "object",
+      "required": [
+        "burn_admin_only"
+      ],
+      "properties": {
+        "burn_admin_only": {
+          "type": "object",
+          "required": [
+            "token_id"
+          ],
+          "properties": {
+            "token_id": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
       "description": "Extension msg",
       "type": "object",
       "required": [
