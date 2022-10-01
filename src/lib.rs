@@ -36,7 +36,9 @@ pub struct Metadata {
 pub type Extension = Option<Metadata>;
 
 pub type Cw721MetadataContract<'a> = cw721_base::Cw721Contract<'a, Extension, Empty, Empty, Empty>;
+
 pub type ExecuteMsg = cw721_base::ExecuteMsg<Extension, Empty>;
+pub type UpdateMetadataMsg=cw721_base::msg::UpdateMetadataMsg<Extension>;
 
 const CONTRACT_NAME: &str = "crates.io:archid";
 const CONTRACT_VERSION: &str = env!("CARGO_PKG_VERSION");
@@ -93,7 +95,6 @@ mod tests {
 
     use cosmwasm_std::testing::{mock_dependencies, mock_env, mock_info};
     use cw721_updatable::{Cw721Query, NftInfoResponse};
-    use cw721_base::msg::UpdateMetadataMsg;
 
     const CREATOR: &str = "creator";
 
@@ -250,17 +251,17 @@ mod tests {
             websites: None,
         });
 
-        let update_msg = ExecuteMsg::UpdateMetadata(UpdateMetadataMsg::<Extension> {
+        let update_msg = ExecuteMsg::UpdateMetadata(UpdateMetadataMsg {
             token_id: token_id1.clone(),
             extension: modified_metadata_extension.clone(),
         });
 
-        let err_update_msg = ExecuteMsg::UpdateMetadata(UpdateMetadataMsg::<Extension> {
+        let err_update_msg = ExecuteMsg::UpdateMetadata(UpdateMetadataMsg {
             token_id: token_id1.clone(),
             extension: err_metadata_extension.clone(),
         });
 
-        let err_update_msg2 = ExecuteMsg::UpdateMetadata(UpdateMetadataMsg::<Extension> {
+        let err_update_msg2 = ExecuteMsg::UpdateMetadata(UpdateMetadataMsg {
             token_id: token_id2.clone(),
             extension: err_metadata_extension.clone(),
         });
