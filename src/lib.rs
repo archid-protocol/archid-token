@@ -280,7 +280,7 @@ mod tests {
         let info1 = contract.nft_info(deps.as_ref(), token_id1.clone()).unwrap();
         assert_eq!(
             info1,
-            NftInfoResponse::<Extension> {
+            NftInfoResponse {
                 token_uri: None,
                 extension: metadata_extension.clone(),
             }
@@ -289,7 +289,7 @@ mod tests {
         let info2 = contract.nft_info(deps.as_ref(), token_id2.clone()).unwrap();
         assert_eq!(
             info2,
-            NftInfoResponse::<Extension> {
+            NftInfoResponse {
                 token_uri: None,
                 extension: metadata_extension.clone(),
             }
@@ -319,7 +319,7 @@ mod tests {
         // Modified NFT info is correct
         assert_eq!(
             update_info,
-            NftInfoResponse::<Extension> {
+            NftInfoResponse {
                 token_uri: None,
                 extension: modified_metadata_extension,
             }
