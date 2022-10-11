@@ -3,7 +3,7 @@ use serde::{Deserialize, Serialize};
 
 use cosmwasm_std::Empty;
 use cw2::set_contract_version;
-pub use cw721_base::{ContractError, InstantiateMsg, MintMsg, MinterResponse, QueryMsg};
+pub use cw721_archid::{ContractError, InstantiateMsg, MintMsg, MinterResponse, QueryMsg};
 use cw721_updatable::{Expiration, ContractInfoResponse};
 
 #[derive(Serialize, Deserialize, Clone, PartialEq, JsonSchema, Debug)]
@@ -35,12 +35,12 @@ pub struct Metadata {
 
 pub type Extension = Option<Metadata>;
 
-pub type Cw721MetadataContract<'a> = cw721_base::Cw721Contract<'a, Extension, Empty, Empty, Empty>;
+pub type Cw721MetadataContract<'a> = cw721_archid::Cw721Contract<'a, Extension, Empty, Empty, Empty>;
 
-pub type ExecuteMsg = cw721_base::ExecuteMsg<Extension, Empty>;
-pub type UpdateMetadataMsg = cw721_base::msg::UpdateMetadataMsg<Extension>;
+pub type ExecuteMsg = cw721_archid::ExecuteMsg<Extension, Empty>;
+pub type UpdateMetadataMsg = cw721_archid::msg::UpdateMetadataMsg<Extension>;
 
-const CONTRACT_NAME: &str = "crates.io:archid";
+const CONTRACT_NAME: &str = "crates.io:archid-token";
 const CONTRACT_VERSION: &str = env!("CARGO_PKG_VERSION");
 
 #[cfg(not(feature = "library"))]

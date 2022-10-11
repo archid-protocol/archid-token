@@ -10,7 +10,7 @@ dependencies = [
  "cosmwasm-std",
  "cw2 0.11.1",
  "cw721",
- "cw721-base",
+ "cw721-archid",
  "cw721-updatable",
  "schemars",
  "serde",
@@ -241,7 +241,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "cw721-base"
+name = "cw721-archid"
 version = "0.13.4"
 dependencies = [
  "cosmwasm-std",
