@@ -43,14 +43,14 @@ pub type UpdateMetadataMsg = cw721_archid::msg::UpdateMetadataMsg<Extension>;
 const CONTRACT_NAME: &str = "crates.io:archid-token";
 const CONTRACT_VERSION: &str = env!("CARGO_PKG_VERSION");
 
-#[cfg(not(feature = "library"))]
 pub mod entry {
     use super::*;
 
+    #[cfg(not(feature = "library"))]
     use cosmwasm_std::entry_point;
     use cosmwasm_std::{Binary, Deps, DepsMut, Env, MessageInfo, Response, StdResult};
 
-    #[entry_point]
+    #[cfg_attr(not(feature = "library"), entry_point)]
     pub fn instantiate(
         deps: DepsMut,
         _env: Env,
@@ -73,7 +73,7 @@ pub mod entry {
         Ok(Response::default())
     }
 
-    #[entry_point]
+    #[cfg_attr(not(feature = "library"), entry_point)]
     pub fn execute(
         deps: DepsMut,
         env: Env,
@@ -83,7 +83,7 @@ pub mod entry {
         Cw721MetadataContract::default().execute(deps, env, info, msg)
     }
 
-    #[entry_point]
+    #[cfg_attr(not(feature = "library"), entry_point)]
     pub fn query(deps: Deps, env: Env, msg: QueryMsg<Empty>) -> StdResult<Binary> {
         Cw721MetadataContract::default().query(deps, env, msg)
     }
