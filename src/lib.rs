@@ -1,10 +1,17 @@
 use schemars::JsonSchema;
 use serde::{Deserialize, Serialize};
 
-use cosmwasm_std::Empty;
+use cosmwasm_std::{Empty, Addr};
 use cw2::set_contract_version;
 pub use cw721_archid::{ContractError, InstantiateMsg, MintMsg, MinterResponse, QueryMsg};
 use cw721_updatable::{Expiration, ContractInfoResponse};
+
+#[derive(Serialize, Deserialize, Clone, PartialEq, Eq, JsonSchema, Debug)]
+pub struct Subdomain {
+    name: Option<String>,
+    resolver: Option<Addr>,
+    minted: Option<bool>,
+}
 
 #[derive(Serialize, Deserialize, Clone, PartialEq, Eq, JsonSchema, Debug)]
 pub struct Account {
@@ -28,7 +35,7 @@ pub struct Metadata {
   pub image: Option<String>,        // e.g. ibid.
   pub expiry: Option<Expiration>,
   pub domain: Option<String>,
-  pub subdomains: Option<Vec<String>>,
+  pub subdomains: Option<Vec<Subdomain>>,
   pub accounts: Option<Vec<Account>>,
   pub websites: Option<Vec<Website>>,
 }
@@ -113,10 +120,28 @@ mod tests {
             .instantiate(deps.as_mut(), mock_env(), info.clone(), init_msg)
             .unwrap();
 
+        let resolver_addr = Addr::unchecked("archway1yvnw8xj5elngcq95e2n2p8f80zl7shfwyxk88858pl6cgzveeqtqy7xtf7".to_string()); 
+
+        let subdomain1 = Subdomain {
+            name: Some("game".to_string()),
+            resolver: Some(resolver_addr.clone()),
+            minted: Some(false),
+        };
+        let subdomain2 = Subdomain {
+            name: Some("dapp".to_string()),
+            resolver: Some(resolver_addr.clone()),
+            minted: Some(false),
+        };
+        let subdomain3 = Subdomain {
+            name: Some("market".to_string()),
+            resolver: Some(resolver_addr.clone()),
+            minted: Some(false),
+        };
+
         let subdomains = vec![
-            "game".to_string(), 
-            "dapp".to_string(), 
-            "market".to_string()
+            subdomain1, 
+            subdomain2, 
+            subdomain3
         ];
 
         let accounts = vec![
