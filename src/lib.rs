@@ -6,6 +6,7 @@ use cw2::set_contract_version;
 pub use cw721_archid::{ContractError, InstantiateMsg, MintMsg, MinterResponse, QueryMsg};
 use cw721_updatable::{Expiration, ContractInfoResponse};
 
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Serialize, Deserialize, Clone, PartialEq, JsonSchema, Debug)]
 pub struct Subdomain {
     name: Option<String>,
@@ -13,6 +14,7 @@ pub struct Subdomain {
     minted: Option<bool>,
 }
 
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Serialize, Deserialize, Clone, PartialEq, JsonSchema, Debug)]
 pub struct Account {
   username: Option<String>,
@@ -21,6 +23,7 @@ pub struct Account {
   verfication_hash: Option<String>,
 }
 
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Serialize, Deserialize, Clone, PartialEq, JsonSchema, Debug)]
 pub struct Website {
   url: Option<String>,
@@ -28,6 +31,7 @@ pub struct Website {
   verfication_hash: Option<String>,
 }
 
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Serialize, Deserialize, Clone, PartialEq, JsonSchema, Debug)]
 pub struct Metadata {
   pub name: Option<String>,         // e.g. for interoperability with external marketplaces
