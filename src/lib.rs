@@ -6,14 +6,14 @@ use cw2::set_contract_version;
 pub use cw721_archid::{ContractError, InstantiateMsg, MintMsg, MinterResponse, QueryMsg};
 use cw721_updatable::{Expiration, ContractInfoResponse};
 
-#[derive(Serialize, Deserialize, Clone, PartialEq, Eq, JsonSchema, Debug)]
+#[derive(Serialize, Deserialize, Clone, PartialEq, JsonSchema, Debug)]
 pub struct Subdomain {
     name: Option<String>,
     resolver: Option<Addr>,
     minted: Option<bool>,
 }
 
-#[derive(Serialize, Deserialize, Clone, PartialEq, Eq, JsonSchema, Debug)]
+#[derive(Serialize, Deserialize, Clone, PartialEq, JsonSchema, Debug)]
 pub struct Account {
   username: Option<String>,
   profile: Option<String>,
@@ -21,14 +21,14 @@ pub struct Account {
   verfication_hash: Option<String>,
 }
 
-#[derive(Serialize, Deserialize, Clone, PartialEq, Eq, JsonSchema, Debug)]
+#[derive(Serialize, Deserialize, Clone, PartialEq, JsonSchema, Debug)]
 pub struct Website {
   url: Option<String>,
   domain: Option<String>,
   verfication_hash: Option<String>,
 }
 
-#[derive(Serialize, Deserialize, Clone, PartialEq, Eq, JsonSchema, Debug)]
+#[derive(Serialize, Deserialize, Clone, PartialEq, JsonSchema, Debug)]
 pub struct Metadata {
   pub name: Option<String>,         // e.g. for interoperability with external marketplaces
   pub description: Option<String>,  // e.g. ibid.
