@@ -9,26 +9,26 @@ use cw721_updatable::{Expiration, ContractInfoResponse};
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Serialize, Deserialize, Clone, PartialEq, JsonSchema, Debug)]
 pub struct Subdomain {
-    name: Option<String>,
-    resolver: Option<Addr>,
-    minted: Option<bool>,
+    pub name: Option<String>,
+    pub resolver: Option<Addr>,
+    pub minted: Option<bool>,
 }
 
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Serialize, Deserialize, Clone, PartialEq, JsonSchema, Debug)]
 pub struct Account {
-  username: Option<String>,
-  profile: Option<String>,
-  account_type: Option<String>,
-  verfication_hash: Option<String>,
+  pub username: Option<String>,
+  pub profile: Option<String>,
+  pub account_type: Option<String>,
+  pub verfication_hash: Option<String>,
 }
 
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Serialize, Deserialize, Clone, PartialEq, JsonSchema, Debug)]
 pub struct Website {
-  url: Option<String>,
-  domain: Option<String>,
-  verfication_hash: Option<String>,
+  pub url: Option<String>,
+  pub domain: Option<String>,
+  pub verfication_hash: Option<String>,
 }
 
 #[allow(clippy::derive_partial_eq_without_eq)]
