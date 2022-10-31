@@ -4,7 +4,7 @@ use serde::{Deserialize, Serialize};
 use cosmwasm_std::{Empty, Addr};
 use cw2::set_contract_version;
 pub use cw721_archid::{ContractError, InstantiateMsg, MintMsg, MinterResponse, QueryMsg};
-use cw721_updatable::{Expiration, ContractInfoResponse};
+use cw721_updatable::{ContractInfoResponse};
 
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Serialize, Deserialize, Clone, PartialEq, JsonSchema, Debug)]
@@ -12,7 +12,7 @@ pub struct Subdomain {
     pub name: Option<String>,
     pub resolver: Option<Addr>,
     pub minted: Option<bool>,
-    pub expiry: Option<Expiration>,
+    pub expiry: Option<u64>,
 }
 
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -38,7 +38,7 @@ pub struct Metadata {
   pub name: Option<String>,         // e.g. for interoperability with external marketplaces
   pub description: Option<String>,  // e.g. ibid.
   pub image: Option<String>,        // e.g. ibid.
-  pub expiry: Option<Expiration>,
+  pub expiry: Option<u64>,
   pub domain: Option<String>,
   pub subdomains: Option<Vec<Subdomain>>,
   pub accounts: Option<Vec<Account>>,
@@ -131,19 +131,19 @@ mod tests {
             name: Some("game".to_string()),
             resolver: Some(resolver_addr.clone()),
             minted: Some(false),
-            expiry: Some(Expiration::AtHeight(1234567)),
+            expiry: Some(1234567),
         };
         let subdomain2 = Subdomain {
             name: Some("dapp".to_string()),
             resolver: Some(resolver_addr.clone()),
             minted: Some(false),
-            expiry: Some(Expiration::AtHeight(1234567)),
+            expiry: Some(1234567),
         };
         let subdomain3 = Subdomain {
             name: Some("market".to_string()),
             resolver: Some(resolver_addr.clone()),
             minted: Some(false),
-            expiry: Some(Expiration::AtHeight(1234567)),
+            expiry: Some(1234567),
         };
 
         let subdomains = vec![
@@ -195,7 +195,7 @@ mod tests {
             description: Some("default token description".into()),
             image: Some("ipfs://QmZdPdZzZum2jQ7jg1ekfeE3LSz1avAaa42G6mfimw9TEn".into()),
             domain: Some("drewstaylor.arch".into()),
-            expiry: Some(Expiration::AtHeight(1234567)),
+            expiry: Some(1234567),
             subdomains: Some(subdomains),
             accounts: Some(accounts),
             websites: Some(websites),
@@ -242,7 +242,7 @@ mod tests {
             description: Some("default token description".into()),
             image: Some("ipfs://QmZdPdZzZum2jQ7jg1ekfeE3LSz1avAaa42G6mfimw9TEn".into()),
             domain: Some("original.arch".into()),
-            expiry: Some(Expiration::AtHeight(1234567)),
+            expiry: Some(1234567),
             subdomains: None,
             accounts: None,
             websites: None,
@@ -253,7 +253,7 @@ mod tests {
             description: Some("default token description".into()),
             image: Some("ipfs://QmZdPdZzZum2jQ7jg1ekfeE3LSz1avAaa42G6mfimw9TEn".into()),
             domain: Some("modified.arch".into()),
-            expiry: Some(Expiration::AtHeight(1234567)),
+            expiry: Some(1234567),
             subdomains: None,
             accounts: None,
             websites: None,

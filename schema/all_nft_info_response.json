@@ -150,14 +150,12 @@
           ]
         },
         "expiry": {
-          "anyOf": [
-            {
-              "$ref": "#/definitions/Expiration"
-            },
-            {
-              "type": "null"
-            }
-          ]
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint64",
+          "minimum": 0.0
         },
         "image": {
           "type": [
@@ -238,14 +236,12 @@
       "type": "object",
       "properties": {
         "expiry": {
-          "anyOf": [
-            {
-              "$ref": "#/definitions/Expiration"
-            },
-            {
-              "type": "null"
-            }
-          ]
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint64",
+          "minimum": 0.0
         },
         "minted": {
           "type": [
