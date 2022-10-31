@@ -237,6 +237,16 @@
     "Subdomain": {
       "type": "object",
       "properties": {
+        "expiry": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/Expiration"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
         "minted": {
           "type": [
             "boolean",

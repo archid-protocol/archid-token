@@ -12,6 +12,7 @@ pub struct Subdomain {
     pub name: Option<String>,
     pub resolver: Option<Addr>,
     pub minted: Option<bool>,
+    pub expiry: Option<Expiration>,
 }
 
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -130,16 +131,19 @@ mod tests {
             name: Some("game".to_string()),
             resolver: Some(resolver_addr.clone()),
             minted: Some(false),
+            expiry: Some(Expiration::AtHeight(1234567)),
         };
         let subdomain2 = Subdomain {
             name: Some("dapp".to_string()),
             resolver: Some(resolver_addr.clone()),
             minted: Some(false),
+            expiry: Some(Expiration::AtHeight(1234567)),
         };
         let subdomain3 = Subdomain {
             name: Some("market".to_string()),
             resolver: Some(resolver_addr.clone()),
             minted: Some(false),
+            expiry: Some(Expiration::AtHeight(1234567)),
         };
 
         let subdomains = vec![
