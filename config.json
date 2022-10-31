@@ -16,6 +16,33 @@
       {
         "type": "set-metadata",
         "chainId": "constantine-1",
+        "codeId": 202,
+        "txhash": "F5CEEA7B2D13CE39D9E4C0FA7E35581F3FDDF5195ABE3B745404F6E5B8A7416C",
+        "contract": "archway16v2d8hp7udzkxruznwvdlzt2pmuqhpatpszgqhhuf9ehlu4wgmaqtwj9fc",
+        "contractMetadata": {
+          "developerAddress": "archway1f395p0gg67mmfd5zcqvpnp9cxnu0hg6r9hfczq",
+          "rewardAddress": "archway1f395p0gg67mmfd5zcqvpnp9cxnu0hg6r9hfczq",
+          "collectPremium": false,
+          "gasRebate": false
+        }
+      },
+      {
+        "type": "instantiate",
+        "chainId": "constantine-1",
+        "codeId": 202,
+        "txhash": "9371CE97F28B5A778CE55768A7236C625F63CFC75EE99ACB400512FFFB18968F",
+        "address": "archway16v2d8hp7udzkxruznwvdlzt2pmuqhpatpszgqhhuf9ehlu4wgmaqtwj9fc",
+        "admin": "archway1f395p0gg67mmfd5zcqvpnp9cxnu0hg6r9hfczq"
+      },
+      {
+        "type": "store",
+        "chainId": "constantine-1",
+        "codeId": 202,
+        "txhash": "DC1AFECA275D8D0FE2B8D1D7AFD107E2C5FB208A63208ACDE02E00E195AEB800"
+      },
+      {
+        "type": "set-metadata",
+        "chainId": "constantine-1",
         "codeId": 193,
         "txhash": "7D1F3AD5D2CE885B0D3CB8611057B95B8116F9D12BC718979AEB40EB09E9557A",
         "contract": "archway15ys52ttavayds06d8xzh22p7kkpucxlljfm52cyl2zgljj5q8hxsng95fx",
