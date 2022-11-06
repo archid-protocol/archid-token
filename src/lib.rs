@@ -1,7 +1,7 @@
 use schemars::JsonSchema;
 use serde::{Deserialize, Serialize};
 
-use cosmwasm_std::{Empty, Addr};
+use cosmwasm_std::{Empty, Addr, Reply, SubMsgResult};
 use cw2::set_contract_version;
 pub use cw721_archid::{ContractError, InstantiateMsg, MintMsg, MinterResponse, QueryMsg};
 use cw721_updatable::{ContractInfoResponse};
@@ -93,6 +93,14 @@ pub mod entry {
         msg: ExecuteMsg,
     ) -> Result<Response, ContractError> {
         Cw721MetadataContract::default().execute(deps, env, info, msg)
+    }
+
+    #[cfg_attr(not(feature = "library"), entry_point)]
+    pub fn reply(_deps: DepsMut, _env: Env, msg: Reply) -> Result<Response, ContractError> {
+        match msg.result {
+            SubMsgResult::Ok(_) => Ok(Response::default()),
+            SubMsgResult::Err(_) => Err(ContractError::Unauthorized {}),
+        }
     }
 
     #[cfg_attr(not(feature = "library"), entry_point)]
