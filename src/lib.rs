@@ -344,12 +344,6 @@ mod tests {
             .unwrap_err();
         assert_eq!(err, ContractError::Unauthorized {});
 
-        // Admin can't rug owners
-        // let err2 = contract
-        //     .execute(deps.as_mut(), mock_env(), admin.clone(), err_update_msg2)
-        //     .unwrap_err();
-        // assert_eq!(err2, ContractError::Unauthorized {});
-
         // Only allowed minters can update NFT
         let _update = contract
             .execute(deps.as_mut(), mock_env(), admin.clone(), update_msg)
@@ -392,7 +386,7 @@ mod tests {
             extension: None,
         });
 
-        let burn_msg = ExecuteMsg::BurnAdminOnly { token_id };
+        let burn_msg = ExecuteMsg::Burn { token_id };
 
         // Mint NFT
         let admin = mock_info(CREATOR, &[]);
