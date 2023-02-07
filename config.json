@@ -14,6 +14,55 @@
     },
     "deployments": [
       {
+        "project": "archid-token",
+        "type": "set-metadata",
+        "chainId": "constantine-1",
+        "codeId": 36,
+        "txhash": "B5AFC4B0D41B19DDD8B1DBE1010A94EDF4F1E633640003F75EA44387965C817D",
+        "contract": "archway1dny07jvnkemv5sndvawn0xurxy57p7whn9gpxmfshq85rlctszgsmgs6ua",
+        "contractMetadata": {
+          "ownerAddress": "archway1f395p0gg67mmfd5zcqvpnp9cxnu0hg6r9hfczq",
+          "rewardsAddress": "archway1f395p0gg67mmfd5zcqvpnp9cxnu0hg6r9hfczq"
+        }
+      },
+      {
+        "project": "archid-token",
+        "type": "instantiate",
+        "chainId": "constantine-1",
+        "codeId": 36,
+        "txhash": "FB01B061A837D9D823AB3DE914CB7225D143960749CF5554704C83908423C4FB",
+        "address": "archway1dny07jvnkemv5sndvawn0xurxy57p7whn9gpxmfshq85rlctszgsmgs6ua",
+        "admin": "archway1f395p0gg67mmfd5zcqvpnp9cxnu0hg6r9hfczq"
+      },
+      {
+        "project": "archid-token",
+        "type": "set-metadata",
+        "chainId": "constantine-1",
+        "codeId": 36,
+        "txhash": "9670D20402E82A3B2B143F51EA333BB7B2851830AF262351AA720C69B57E2363",
+        "contract": "archway1f5ulw9rr66y320gj8f83er30jel9kkuvmqa7n420x593ezrw088s22wvzw",
+        "contractMetadata": {
+          "ownerAddress": "archway1f395p0gg67mmfd5zcqvpnp9cxnu0hg6r9hfczq",
+          "rewardsAddress": "archway1f395p0gg67mmfd5zcqvpnp9cxnu0hg6r9hfczq"
+        }
+      },
+      {
+        "project": "archid-token",
+        "type": "instantiate",
+        "chainId": "constantine-1",
+        "codeId": 36,
+        "txhash": "8536DAA29AB95E8BC1943D6D1C8FF8FB1B8477FBB079F7FBA5FD2C08DBDE294D",
+        "address": "archway1f5ulw9rr66y320gj8f83er30jel9kkuvmqa7n420x593ezrw088s22wvzw",
+        "admin": "archway1f395p0gg67mmfd5zcqvpnp9cxnu0hg6r9hfczq"
+      },
+      {
+        "project": "archid-token",
+        "type": "store",
+        "chainId": "constantine-1",
+        "codeId": 36,
+        "txhash": "0F2C9552D4FEE62F48DBB5C8259440157D06D54081408C90653A2B6CE704D5FF"
+      },
+      {
         "type": "set-metadata",
         "chainId": "constantine-1",
         "codeId": 211,
@@ -24,7 +73,8 @@
           "rewardAddress": "archway1f395p0gg67mmfd5zcqvpnp9cxnu0hg6r9hfczq",
           "collectPremium": false,
           "gasRebate": false
-        }
+        },
+        "project": "archid-token"
       },
       {
         "type": "instantiate",
@@ -32,7 +82,8 @@
         "codeId": 211,
         "txhash": "0A013A89B2CF7DCCEA762BEAE0D2C2001AB8D03CACA732BACAD50D6F9F06A0C2",
         "address": "archway1pttqqksl0ys04zn78c73guftygylpxgez82csxgeardweqsg9f7slxsc3g",
-        "admin": "archway1f395p0gg67mmfd5zcqvpnp9cxnu0hg6r9hfczq"
+        "admin": "archway1f395p0gg67mmfd5zcqvpnp9cxnu0hg6r9hfczq",
+        "project": "archid-token"
       },
       {
         "type": "set-metadata",
@@ -45,7 +96,8 @@
           "rewardAddress": "archway1f395p0gg67mmfd5zcqvpnp9cxnu0hg6r9hfczq",
           "collectPremium": false,
           "gasRebate": false
-        }
+        },
+        "project": "archid-token"
       },
       {
         "type": "instantiate",
@@ -53,7 +105,8 @@
         "codeId": 211,
         "txhash": "B02B63823FF4A219DF0F4E79D7BDB449214FC62D8DA42057CA3EC1A2213F6007",
         "address": "archway16n3mry8zpfhtqlzlp5967phqlwcgmfwn6z36c2wvnea8065xj3wqvuhv44",
-        "admin": "archway1f395p0gg67mmfd5zcqvpnp9cxnu0hg6r9hfczq"
+        "admin": "archway1f395p0gg67mmfd5zcqvpnp9cxnu0hg6r9hfczq",
+        "project": "archid-token"
       },
       {
         "type": "set-metadata",
@@ -66,7 +119,8 @@
           "rewardAddress": "archway1f395p0gg67mmfd5zcqvpnp9cxnu0hg6r9hfczq",
           "collectPremium": false,
           "gasRebate": false
-        }
+        },
+        "project": "archid-token"
       },
       {
         "type": "instantiate",
@@ -74,19 +128,22 @@
         "codeId": 211,
         "txhash": "375B325029DC066E6322806F9B96C0DFC64265BEF3772E729CA5DBFB63F11815",
         "address": "archway1r4wcjl4gd6p62hsnhqmdyhgaxr45hahdvut95fqg5khed6tjlgmsc5pn2p",
-        "admin": "archway1f395p0gg67mmfd5zcqvpnp9cxnu0hg6r9hfczq"
+        "admin": "archway1f395p0gg67mmfd5zcqvpnp9cxnu0hg6r9hfczq",
+        "project": "archid-token"
       },
       {
         "type": "store",
         "chainId": "constantine-1",
         "codeId": 211,
-        "txhash": "8962A3439F6620A075A8FD93A23007738C18CC98FCFCCAB672C8B67A9DF5EA8D"
+        "txhash": "8962A3439F6620A075A8FD93A23007738C18CC98FCFCCAB672C8B67A9DF5EA8D",
+        "project": "archid-token"
       },
       {
         "type": "store",
         "chainId": "constantine-1",
         "codeId": 209,
-        "txhash": "E62E2A8063D84FD12CD4E16EA2CC4D9261362403BDCF99D1251EC5437C522DF3"
+        "txhash": "E62E2A8063D84FD12CD4E16EA2CC4D9261362403BDCF99D1251EC5437C522DF3",
+        "project": "archid-token"
       },
       {
         "type": "set-metadata",
@@ -99,7 +156,8 @@
           "rewardAddress": "archway1f395p0gg67mmfd5zcqvpnp9cxnu0hg6r9hfczq",
           "collectPremium": false,
           "gasRebate": false
-        }
+        },
+        "project": "archid-token"
       },
       {
         "type": "instantiate",
@@ -107,13 +165,15 @@
         "codeId": 208,
         "txhash": "4A7BB8175CDE481E904CBAECCAA7B18DA92F42C2669481E4A31EF7A327B67CD4",
         "address": "archway14c0pk5lxrt74j84wssdghf6ctd3ekttcwrshryuzvsxuu9j2n0pqpj7sjf",
-        "admin": "archway1f395p0gg67mmfd5zcqvpnp9cxnu0hg6r9hfczq"
+        "admin": "archway1f395p0gg67mmfd5zcqvpnp9cxnu0hg6r9hfczq",
+        "project": "archid-token"
       },
       {
         "type": "store",
         "chainId": "constantine-1",
         "codeId": 208,
-        "txhash": "4A2DA3E708B2C3658649BC26C0BA74E2C7435FF35AC1104B753BD7492F879DDC"
+        "txhash": "4A2DA3E708B2C3658649BC26C0BA74E2C7435FF35AC1104B753BD7492F879DDC",
+        "project": "archid-token"
       },
       {
         "type": "set-metadata",
@@ -126,7 +186,8 @@
           "rewardAddress": "archway1f395p0gg67mmfd5zcqvpnp9cxnu0hg6r9hfczq",
           "collectPremium": false,
           "gasRebate": false
-        }
+        },
+        "project": "archid-token"
       },
       {
         "type": "instantiate",
@@ -134,13 +195,15 @@
         "codeId": 202,
         "txhash": "9371CE97F28B5A778CE55768A7236C625F63CFC75EE99ACB400512FFFB18968F",
         "address": "archway16v2d8hp7udzkxruznwvdlzt2pmuqhpatpszgqhhuf9ehlu4wgmaqtwj9fc",
-        "admin": "archway1f395p0gg67mmfd5zcqvpnp9cxnu0hg6r9hfczq"
+        "admin": "archway1f395p0gg67mmfd5zcqvpnp9cxnu0hg6r9hfczq",
+        "project": "archid-token"
       },
       {
         "type": "store",
         "chainId": "constantine-1",
         "codeId": 202,
-        "txhash": "DC1AFECA275D8D0FE2B8D1D7AFD107E2C5FB208A63208ACDE02E00E195AEB800"
+        "txhash": "DC1AFECA275D8D0FE2B8D1D7AFD107E2C5FB208A63208ACDE02E00E195AEB800",
+        "project": "archid-token"
       },
       {
         "type": "set-metadata",
@@ -153,7 +216,8 @@
           "rewardAddress": "archway1f395p0gg67mmfd5zcqvpnp9cxnu0hg6r9hfczq",
           "collectPremium": false,
           "gasRebate": false
-        }
+        },
+        "project": "archid-token"
       },
       {
         "type": "instantiate",
@@ -161,13 +225,15 @@
         "codeId": 193,
         "txhash": "6BC15E64925FA82DB6EA1DB56B894BC4437A895BBDD1D124476D7E2FD99D6543",
         "address": "archway15ys52ttavayds06d8xzh22p7kkpucxlljfm52cyl2zgljj5q8hxsng95fx",
-        "admin": "archway1f395p0gg67mmfd5zcqvpnp9cxnu0hg6r9hfczq"
+        "admin": "archway1f395p0gg67mmfd5zcqvpnp9cxnu0hg6r9hfczq",
+        "project": "archid-token"
       },
       {
         "type": "store",
         "chainId": "constantine-1",
         "codeId": 193,
-        "txhash": "FAC5E8E20E81F237AEA3E9E69E2DCFDDECD9E361EBB81336186F3130BF50219B"
+        "txhash": "FAC5E8E20E81F237AEA3E9E69E2DCFDDECD9E361EBB81336186F3130BF50219B",
+        "project": "archid-token"
       }
     ]
   },
