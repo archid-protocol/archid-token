@@ -137,6 +137,14 @@
             "$ref": "#/definitions/Account"
           }
         },
+        "created": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint64",
+          "minimum": 0.0
+        },
         "description": {
           "type": [
             "string",
@@ -235,6 +243,14 @@
     "Subdomain": {
       "type": "object",
       "properties": {
+        "created": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint64",
+          "minimum": 0.0
+        },
         "expiry": {
           "type": [
             "integer",
