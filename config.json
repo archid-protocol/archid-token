@@ -16,6 +16,34 @@
       {
         "project": "archid-token",
         "type": "set-metadata",
+        "chainId": "constantine-3",
+        "codeId": 57,
+        "txhash": "363066029E180A9AB9E7E2554694D74399A67D6AF9F2FA81F3432997254A55C9",
+        "contract": "archway1n5jruvxu5syq70y7ms6py2ycq5jqjxud8f053l8x7e7e0nafw7kswvhwq0",
+        "contractMetadata": {
+          "ownerAddress": "archway1f395p0gg67mmfd5zcqvpnp9cxnu0hg6r9hfczq",
+          "rewardsAddress": "archway1f395p0gg67mmfd5zcqvpnp9cxnu0hg6r9hfczq"
+        }
+      },
+      {
+        "project": "archid-token",
+        "type": "instantiate",
+        "chainId": "constantine-3",
+        "codeId": 57,
+        "txhash": "874D505E570606134FC99FCB1D6EF50107F1982584F48907967C9512F80C4871",
+        "address": "archway1n5jruvxu5syq70y7ms6py2ycq5jqjxud8f053l8x7e7e0nafw7kswvhwq0",
+        "admin": "archway1f395p0gg67mmfd5zcqvpnp9cxnu0hg6r9hfczq"
+      },
+      {
+        "project": "archid-token",
+        "type": "store",
+        "chainId": "constantine-3",
+        "codeId": 57,
+        "txhash": "6D5A1DED9E7F3A060770E8DFC81E8AD105E108FE34FD0B7B5DFBEBA5F75D8781"
+      },
+      {
+        "project": "archid-token",
+        "type": "set-metadata",
         "chainId": "constantine-1",
         "codeId": 297,
         "txhash": "BEFD76117F684D7AECDDA835C478CA2DCB095ECEC05779ED5A993D6EFB4FA8ED",
@@ -288,13 +316,13 @@
   },
   "network": {
     "name": "constantine",
-    "chainId": "constantine-1",
+    "chainId": "constantine-3",
     "type": "testnet",
     "fees": {
-      "feeDenom": "uconst"
+      "feeDenom": "aconst"
     },
     "gas": {
-      "prices": "0.002uconst",
+      "prices": "0.002aconst",
       "mode": "auto",
       "adjustment": "1.3"
     },
@@ -306,12 +334,9 @@
     },
     "urls": {
       "rpc": {
-        "url": "https://rpc.constantine-1.archway.tech",
+        "url": "https://rpc.constantine.archway.tech",
         "port": 443
-      },
-      "faucets": [
-        "https://faucet.constantine-1.archway.tech"
-      ]
+      }
     }
   }
 }
