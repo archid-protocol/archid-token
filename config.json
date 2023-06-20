@@ -336,26 +336,26 @@
     ]
   },
   "network": {
-    "name": "constantine",
-    "chainId": "constantine-3",
+    "name": "Archway",
+    "chainId": "mainnet-dry-run-2",
     "type": "testnet",
     "fees": {
-      "feeDenom": "aconst"
+      "feeDenom": "aarch"
     },
     "gas": {
-      "prices": "0.002aconst",
+      "prices": "0.002aarch",
       "mode": "auto",
-      "adjustment": "1.3"
+      "adjustment": "1.5"
     },
     "wasm": {
       "bech32Hrp": "archway",
-      "archwayd": "0.0.4",
+      "archwayd": "0.1.0",
       "configDir": ".archway",
       "binary": "archwayd"
     },
     "urls": {
       "rpc": {
-        "url": "https://rpc.constantine.archway.tech",
+        "url": "https://rpc.mainnet-dryrun-2.archway.tech",
         "port": 443
       }
     }
