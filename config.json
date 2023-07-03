@@ -16,6 +16,41 @@
       {
         "project": "archid-token",
         "type": "set-metadata",
+        "chainId": "archway-1",
+        "codeId": 10,
+        "txhash": "6314727B7C83D506A4C4E26E846AEA2951B9E49EF99F7BF4424BE93AAD92486C",
+        "contract": "archway1cf5rq0amcl5m2flqrtl4gw2mdl3zdec9vlp5hfa9hgxlwnmrlazsdycu4l",
+        "contractMetadata": {
+          "ownerAddress": "archway1n7d4c52knwqqkw9j975ranknkp4fn3we0unrp6",
+          "rewardsAddress": "archway1n7d4c52knwqqkw9j975ranknkp4fn3we0unrp6"
+        }
+      },
+      {
+        "project": "archid-token",
+        "type": "instantiate",
+        "chainId": "archway-1",
+        "codeId": 10,
+        "txhash": "881D8E0AEFCBEA1D8E39690DDC2DD4390E5D84D64A75FD609177572A3078EFCD",
+        "address": "archway1cf5rq0amcl5m2flqrtl4gw2mdl3zdec9vlp5hfa9hgxlwnmrlazsdycu4l",
+        "admin": "archway1n7d4c52knwqqkw9j975ranknkp4fn3we0unrp6",
+        "label": "archid-token v1",
+        "args": {
+          "name": "archid",
+          "symbol": "AID",
+          "minter": "archway1275jwjpktae4y4y0cdq274a2m0jnpekhttnfuljm6n59wnpyd62qppqxq0"
+        }
+      },
+      {
+        "project": "archid-token",
+        "type": "store",
+        "chainId": "archway-1",
+        "codeId": 10,
+        "checksum": "4198bde6e2bac2f33e49e43611b07baaa7e490b0023f398e3982d29bbeadbed5",
+        "txhash": "6A3CC9DF855DDE8F771B8D5E765C3F84C8F762DCB2376B4A66B83AA235707C7E"
+      },
+      {
+        "project": "archid-token",
+        "type": "set-metadata",
         "chainId": "constantine-3",
         "codeId": 365,
         "txhash": "DC4D67C9711DFADB6246D91CA2C7693BF74B09C773DD463179F56E39C8473B23",
