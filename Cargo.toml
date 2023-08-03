@@ -1,7 +1,7 @@
 [package]
 name = "archid-token"
 version = "1.0.0"
-authors = ["Drew Taylor <drew@chainofinsight.com>"]
+authors = ["Drew Taylor <drew.taylor@philabs.xyz>"]
 edition = "2018"
 
 exclude = [
@@ -42,8 +42,8 @@ optimize = """docker run --rm -v "$(pwd)":/code \
 [dependencies]
 cosmwasm-std = "~1.0.0-beta"
 cw2 = "0.11"
-cw721-archid = { path = "../cw721-updatable", version = "0.13.4", features = ["library"] }
-cw721-updatable = { path = "../cw721-updatable/packages/cw721-updatable", version = "0.13.4" }
+cw721-archid = { git = "https://github.com/archid-protocol/cw721-updatable.git", version = "1.0.0", features = ["library"] }
+cw721-updatable = { git = "https://github.com/archid-protocol/cw721-updatable.git", version = "1.0.0" }
 schemars = "0.8"
 serde = { version = "1.0", default-features = false, features = ["derive"] }
 thiserror = "1.0"
