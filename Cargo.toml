@@ -7,6 +7,7 @@ description = "ArchID cw721 token collection contract (AID)"
 keywords = ["ArchID", "CosmWasm", "cw721"]
 repository = "https://github.com/archid-protocol/archid-token"
 homepage = "https://archid.app"
+documentation = "https://docs.archid.app"
 license = "Apache-2.0"
 
 exclude = [
