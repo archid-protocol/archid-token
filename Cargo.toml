@@ -3,6 +3,11 @@ name = "archid-token"
 version = "1.0.0"
 authors = ["Drew Taylor <drew.taylor@philabs.xyz>"]
 edition = "2018"
+description = "ArchID cw721 token collection contract (AID)"
+keywords = ["ArchID", "CosmWasm", "cw721]
+repository = "https://github.com/archid-protocol/archid-token"
+homepage = "https://archid.app"
+license = "Apache-2.0"
 
 exclude = [
   # Those files are rust-optimizer artifacts. You might want to commit them for convenience but they should not be part of the source code publication.
