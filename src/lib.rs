@@ -2,9 +2,13 @@ use schemars::JsonSchema;
 use serde::{Deserialize, Serialize};
 
 use cosmwasm_std::{Empty, Addr, Reply, SubMsgResult};
-use cw2::set_contract_version;
+use cw2::{get_contract_version, set_contract_version};
 pub use cw721_archid::{ContractError, InstantiateMsg, MintMsg, MinterResponse, QueryMsg};
 use cw721_updatable::{ContractInfoResponse};
+
+#[derive(Serialize, Deserialize, Clone, Debug, PartialEq, Eq, JsonSchema)]
+#[serde(rename_all = "snake_case")]
+pub struct MigrateMsg {}
 
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Serialize, Deserialize, Clone, PartialEq, JsonSchema, Debug)]
@@ -108,6 +112,21 @@ pub mod entry {
     #[cfg_attr(not(feature = "library"), entry_point)]
     pub fn query(deps: Deps, env: Env, msg: QueryMsg<Empty>) -> StdResult<Binary> {
         Cw721MetadataContract::default().query(deps, env, msg)
+    }
+
+    #[cfg_attr(not(feature = "library"), entry_point)]
+    pub fn migrate(deps: DepsMut, _env: Env, _msg: MigrateMsg) -> Result<Response, ContractError> {
+        let original_version = get_contract_version(deps.storage)?;
+        let name = CONTRACT_NAME.to_string();
+        let version = CONTRACT_VERSION.to_string();
+        if original_version.contract != name {
+            return Err(ContractError::Unauthorized {});
+        }
+        if original_version.version >= version {
+            return Err(ContractError::Unauthorized {});
+        }
+        set_contract_version(deps.storage, CONTRACT_NAME, CONTRACT_VERSION)?;
+        Ok(Response::default())
     }
 }
 
