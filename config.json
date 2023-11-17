@@ -15,6 +15,22 @@
     "deployments": [
       {
         "project": "archid-token",
+        "type": "migrate",
+        "chainId": "constantine-3",
+        "codeId": 1766,
+        "contract": "archway146htsfvftmq8fl26977w9xgdwmsptr2quuf7yyra4j0gttx32z3secq008",
+        "txhash": "F29B2C7E681514FF634CA61FA81AF63ABFCDD1C292EB99309711EE3774B2E034"
+      },
+      {
+        "project": "archid-token",
+        "type": "store",
+        "chainId": "constantine-3",
+        "codeId": 1744,
+        "checksum": "00c87c383ab7545a503cfbb6e3449637304bf65db840ceb6a491f20e9adf6faf",
+        "txhash": "458890CFD097723A6B325FF5A553F3DBD8B804704DBDE85DED35757F020C2FFA"
+      },
+      {
+        "project": "archid-token",
         "type": "set-metadata",
         "chainId": "archway-1",
         "codeId": 10,
