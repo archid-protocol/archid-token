@@ -15,6 +15,22 @@
     "deployments": [
       {
         "project": "archid-token",
+        "type": "migrate",
+        "chainId": "archway-1",
+        "codeId": 237,
+        "contract": "archway1cf5rq0amcl5m2flqrtl4gw2mdl3zdec9vlp5hfa9hgxlwnmrlazsdycu4l",
+        "txhash": "C66DF0CFF5A2C5422B5B2FAFC4FEDB14DCBAB82F45F03A9780B262E660581932"
+      },
+      {
+        "project": "archid-token",
+        "type": "store",
+        "chainId": "archway-1",
+        "codeId": 237,
+        "checksum": "00c87c383ab7545a503cfbb6e3449637304bf65db840ceb6a491f20e9adf6faf",
+        "txhash": "D2FC38C8B634678B321930EA0927C50CE5426C9413E4BD6E8594F868A2FAD337"
+      },
+      {
+        "project": "archid-token",
         "type": "set-metadata",
         "chainId": "archway-1",
         "codeId": 10,
