@@ -1,13 +1,13 @@
 [package]
 name = "archid-token"
-version = "1.0.2"
+version = "1.0.3"
 authors = ["Drew Taylor <drew.taylor@philabs.xyz>"]
 edition = "2018"
 description = "ArchID cw721 token collection contract (AID)"
 keywords = ["ArchID", "CosmWasm", "cw721"]
 repository = "https://github.com/archid-protocol/archid-token"
 homepage = "https://archid.app"
-documentation = "https://docs.archid.app"
+documentation = "https://docs.rs/archid-token"
 license = "Apache-2.0"
 
 exclude = [
