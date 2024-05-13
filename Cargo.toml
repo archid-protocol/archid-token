@@ -1,6 +1,6 @@
 [package]
 name = "archid-token"
-version = "1.0.2"
+version = "1.0.3"
 authors = ["Drew Taylor <drew.taylor@philabs.xyz>"]
 edition = "2018"
 description = "ArchID cw721 token collection contract (AID)"
